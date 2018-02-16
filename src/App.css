@@ -1,0 +1,39 @@
+.App {
+    text-align: center;
+    font: Ubuntu;
+    background-color: #fa824c;
+}
+
+.App-logo {
+  animation-direction: alternate-reverse;
+  animation: App-logo-spin infinite 10s linear;
+  height: 100px;
+}
+
+.App-header {
+    background-color: #ff9566;
+    height: 150px;
+    padding: 20px;
+}
+
+.App-title {
+    font-size: 1.5em;
+    color: #3c91e6;
+}
+
+.Form1 {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #3c91e6;
+    width: 330px;
+    padding: 10px;
+}
+
+@keyframes App-logo-spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(360deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
