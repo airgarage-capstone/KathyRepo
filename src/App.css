@@ -30,6 +30,11 @@
     padding: 10px;
 }
 
+input[type=text] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
 @keyframes App-logo-spin {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(360deg); }
