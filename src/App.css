@@ -2,17 +2,27 @@
     text-align: center;
     font: Ubuntu;
     background-color: #fa824c;
+    height: 100%;
 }
 
 .App-logo {
-  animation-direction: alternate-reverse;
   animation: App-logo-spin infinite 10s linear;
   height: 100px;
 }
 
+#logorun {
+    padding: 5px;
+    position: absolute;
+    animation: run infinite 7s linear;
+}
+
+.App-drive {
+    height: 150px;
+}
+
 .App-header {
     background-color: #ff9566;
-    height: 150px;
+    height: 140px;
     padding: 20px;
 }
 
@@ -21,18 +31,10 @@
     color: #3c91e6;
 }
 
-.Form1 {
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #3c91e6;
-    width: 330px;
-    padding: 10px;
-}
-
-input[type=text] {
-    border: 2px solid #fa824c;
-    border-radius: 4px;
+@keyframes run {
+    0% { left: 0; transform: rotate(0deg);}
+    50%{ left: 75%; transform: rotate(360deg);}
+    100%{ left: 0; transform: rotate(0deg);}
 }
 
 @keyframes App-logo-spin {

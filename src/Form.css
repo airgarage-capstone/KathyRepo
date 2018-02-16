@@ -1,0 +1,13 @@
+.Form1 {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #3c91e6;
+    width: 330px;
+    padding: 10px;
+}
+
+input[type=text] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
