@@ -16,7 +16,6 @@ class App extends Component {
             <div id="logorun">
             <img src={logo} className="App-drive" alt="logo" />
             </div>
-            
       </div>
     );
   }

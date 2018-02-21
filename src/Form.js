@@ -1,112 +1,71 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+		first_name: '',
+		last_name: '',
+		dob: '',
+		email: '',
+		password: '',
+		phone: '',
+	}
+
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({[event.target.name]: event.target.value});
+	}
+
+	handleSubmit(event) {
+		alert("Thank you for registering to AirGarage " + this.state.first_name);
+		event.preventDefault();
+		console.log(this.state);
+	}
+
 render() {
 	return (
-		<form className="Form1">
+		<form className="Form1" onSubmit={this.handleSubmit}>
             <label>Enter your first name:
-            <input type="text" name="first_name"/><br/>
+            <input type="text" name="first_name" value={this.state.first_name} onChange={this.handleChange}/><br/>
             </label>
             <label>Enter your last name:
-            <input type="text" name="last_name"/><br/>
+            <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleChange}/><br/>
             </label>
-            <label>DOB (MM/DD/YYYY):
-            <input type="text" name="dob"/><br/>
-            </label>
-            <br/>
-            
-            
-            <label>Street Address 1:
-            <input type="text" name="street1"/><br/>
-            </label>
-            <label>Street Address 2:
-            <input type="text" name="last_name"/><br/>
-            </label>
-            <label>Enter City:
-            <input type="text" name="email"/><br/>
-            </label>
-            <label>State:
-            
-            <select>
-            <option value="state">Choose state</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="DC">District Of Columbia</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-            </select>
-            
-            </label> <br/><br/>
-            
+
+						hello
+
+            <label>DOB (MM/DD/YYYY)
+            <input type="date" name="dob" value={this.state.dob} onChange={this.handleChange}/><br/>
+            </label><br/><br/>
+
             <label>Enter your email:
-            <input type="text" name="email"/><br/>
+            <input type="email" name="email" value={this.state.email} onChange={this.handleChange}/><br/>
             </label>
             <label>Enter your password:
-            <input type="text" name="password"/><br/>
+            <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/><br/>
             </label><br/>
-            
+
             <label>I am here looking for:</label>
-            <select className="options">
+            <select className="options" onChange={this.handleChange}>
             <option name="blank">Choose option</option>
             <option name="find_parking">Find parking</option>
             <option name="list_a_spot">List a spot</option>
             <option name="both">Both</option>
             </select>
-            
+
             <br/>
-            <input type="checkbox" name="confirm"/>
-            I prefer you contact me via Phone Number?<br/>
             <label>Phone Number:
-            <input type="text" name="phone"/><br/>
+            <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange}/><br/>
             </label>
-            <input type="button" value="Sign up!"/>
+            <br/>
+            <button>Sign up!</button>
+						<input type="reset"/>
         </form>
         );
     }

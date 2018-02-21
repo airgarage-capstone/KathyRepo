@@ -2,7 +2,8 @@
     text-align: center;
     font: Ubuntu;
     background-color: #fa824c;
-    height: 100%;
+    margin: auto;
+    width: 50%;
 }
 
 .App-logo {
