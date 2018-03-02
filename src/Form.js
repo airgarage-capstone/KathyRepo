@@ -12,6 +12,7 @@ class Form extends React.Component {
 		email: '',
 		password: '',
 		phone: '',
+		accountType: ''
 	}
 
 		this.handleChange = this.handleChange.bind(this);
@@ -19,11 +20,12 @@ class Form extends React.Component {
 	}
 
 	handleChange(event) {
+		this.state.accountType = document.getElementById("opts").value;
 		this.setState({[event.target.name]: event.target.value});
 	}
 
 	handleSubmit(event) {
-		alert("Thank you for registering to AirGarage " + this.state.first_name);
+		alert("Hi " + this.state.first_name);
 		event.preventDefault();
 		console.log(this.state);
 	}
@@ -38,11 +40,9 @@ render() {
             <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleChange}/><br/>
             </label>
 
-						hello
-
             <label>DOB (MM/DD/YYYY)
             <input type="date" name="dob" value={this.state.dob} onChange={this.handleChange}/><br/>
-            </label><br/><br/>
+            </label><br/>
 
             <label>Enter your email:
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange}/><br/>
@@ -52,20 +52,20 @@ render() {
             </label><br/>
 
             <label>I am here looking for:</label>
-            <select className="options" onChange={this.handleChange}>
+            <select id="opts" onChange={this.handleChange}>
             <option name="blank">Choose option</option>
             <option name="find_parking">Find parking</option>
             <option name="list_a_spot">List a spot</option>
             <option name="both">Both</option>
             </select>
 
+
             <br/>
             <label>Phone Number:
-            <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange}/><br/>
+            <input type="text" name="phone" maxlength="10" value={this.state.phone} onChange={this.handleChange}/><br/>
             </label>
             <br/>
-            <button>Sign up!</button>
-						<input type="reset"/>
+            <input type="submit" value="Sign up!"/>
         </form>
         );
     }
