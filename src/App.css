@@ -1,46 +1,57 @@
 .App {
     text-align: center;
     font: Ubuntu;
-    background-color: #fa824c;
-    height: 100%;
+    width: 80%;
+    background-image: url("./map.png");
+    background-size: 50%;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 10s linear;
-  height: 100px;
-}
-
-#logorun {
-    padding: 5px;
-    position: absolute;
-    animation: run infinite 7s linear;
-}
-
-.App-drive {
-    height: 150px;
+  position: relative;
+  animation: App-logo-spin infinite 30s linear;
+  height: 70px;
 }
 
 .App-header {
-    background-color: #ff9566;
-    height: 140px;
-    padding: 20px;
+    background: linear-gradient(rgba(250,130,76,1), rgba(255,0,0,0));
+    padding: 10px;
 }
 
 .App-title {
-    font-size: 1.5em;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     color: #3c91e6;
+}
+
+input[type=text] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+input[type=email] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+input[type=date] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+#logorun {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    animation: run infinite 6s linear;
 }
 
 @keyframes run {
     0% { left: 0; transform: rotate(0deg);}
-    50%{ left: 75%; transform: rotate(360deg);}
+    50%{ left: 80%; transform: rotate(360deg);}
     100%{ left: 0; transform: rotate(0deg);}
 }
 
 @keyframes App-logo-spin {
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(360deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(360deg); }
-    100% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
