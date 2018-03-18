@@ -1,0 +1,20 @@
+.container {
+  padding: 2px 16px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+img {
+  width: 470px;
+}
+
+th {
+  color: #fa824c;
+}
+
+td {
+  color: #3c91e6;
+}
