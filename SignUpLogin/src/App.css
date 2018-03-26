@@ -1,0 +1,54 @@
+.App {
+    box-sizing:border-box;
+    text-align: center;
+    font: Ubuntu;
+    width: 100%;
+    background-image: url("./map.png");
+    background-size: 50%;
+    padding: 10px;
+}
+
+.App-logo {
+  position: relative;
+  animation: App-logo-spin infinite 30s linear;
+  height: 70px;
+}
+
+.App-title {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: #3c91e6;
+}
+
+input[type=text] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+input[type=email] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+input[type=date] {
+    border: 2px solid #fa824c;
+    border-radius: 4px;
+}
+
+#logorun {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    animation: run infinite 6s linear;
+}
+
+@keyframes run {
+    0% { left: 0; transform: rotate(0deg);}
+    50%{ left: 80%; transform: rotate(360deg);}
+    100%{ left: 0; transform: rotate(0deg);}
+}
+
+@keyframes App-logo-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
