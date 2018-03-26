@@ -1,0 +1,14 @@
+.Form {
+    box-sizing: border-box;
+    color: white;
+    margin: auto;
+    text-align: center;
+    background-color: #3c91e6;
+    width: 60%;
+    padding: 20px;
+    border-radius: 25px;
+    line-height: 1.6;
+    opacity: 0.90;
+    line-height: 1.8;
+    resize: vertical;
+}
