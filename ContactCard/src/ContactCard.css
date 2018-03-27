@@ -1,20 +1,38 @@
+p:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+p {
+  display: inline-block;
+  margin: 15px;
+  box-sizing: border-box;
+  font: Ubuntu;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 15px;
+  overflow: auto;
+}
+
 .container {
-  padding: 2px 16px;
+  padding: 5px 5px;
 }
 
-th, td {
-  padding: 10px;
-  text-align: left;
+.container img {
+  width: 100%;
 }
 
-img {
-  width: 470px;
-}
-
-th {
+b {
   color: #fa824c;
 }
 
-td {
-  color: #3c91e6;
+.internal {
+  display: inline-block;
+  box-sizing: border-box;
+  font: Ubuntu;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(60,145,230,0.5);
+  border-radius: 10px;
+  padding: 15px;
+  overflow: auto;
 }
