@@ -1,14 +1,1 @@
-.card {
-    margin: 10px;
-    position: static;
-    box-sizing: border-box;
-    font: Ubuntu;
-    width: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 15px;
-}
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
