@@ -25,8 +25,7 @@ componentDidMount() {
       <img src={ person.photo_url === "" || person.photo_url === null ||
       person.photo_url === "None" ? space : person.photo_url }></img><br/>
 
-      <b>Name: </b>
-      { person.name } <br/><br/>
+      <b><h1>{ person.name }</h1></b>
 
       <div className="internal">
       <b>Address 1: </b>

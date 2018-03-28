@@ -30,7 +30,6 @@ b {
 }
 
 .internal {
-  display: inline-block;
   box-sizing: border-box;
   font: Ubuntu;
   width: 100%;
