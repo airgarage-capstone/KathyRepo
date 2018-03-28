@@ -22,7 +22,7 @@ componentDidMount() {
   	return (
       <div className="container">
       { this.state.persons.map(person => <p> <div className="container">
-      <img src={person.photo_url === "" || person.photo_url === null ||
+      <img src={ person.photo_url === "" || person.photo_url === null ||
       person.photo_url === "None" ? space : person.photo_url }></img><br/>
 
       <b>Name: </b>
