@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 import './Form.css';
+import axios from 'axios';
 
 class Form2 extends React.Component {
 	constructor(props) {
@@ -15,8 +16,20 @@ class Form2 extends React.Component {
 	}
 
 	handleChange(event) {
-		this.state.accountType = document.getElementById("opts").value;
-		this.setState({[event.target.name]: event.target.value});
+		//this.state.accountType = document.getElementById("opts").value;
+		//this.setState({[event.target.name]: event.target.value});
+
+		const user = {
+			username: this.state.email,
+			password: this.state.password
+		}
+
+		axios.post('http://staging.airgara.ge/api/register/', { user })
+		.then(res => {
+				console.log(res);
+				console.log(res.data);
+			})
+
 	}
 
 	handleSubmit(event) {

@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 import './Form.css';
+import axios from 'axios';
 
 class Form extends React.Component {
 	constructor(props) {
@@ -8,7 +9,7 @@ class Form extends React.Component {
 		this.state = {
 		first_name: '',
 		last_name: '',
-		dob: '',
+		dob: '04/12/1993',
 		email: '',
 		password: '',
 		phone: '',
@@ -25,9 +26,30 @@ class Form extends React.Component {
 	}
 
 	handleSubmit(event) {
-		alert("Hi " + this.state.first_name);
+
+		/* todo need to change the date format */
+
+		const user = {
+			first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      username: this.state.email,
+      password : this.state.password,
+      profile: {
+       	accountType: this.state.accountType,
+       	dob: this.state.dob,
+        phone : this.state.phone
+			}
+		}
+
 		event.preventDefault();
 		console.log(this.state);
+
+		axios.post('http://staging.airgara.ge/api/register/', user)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+				alert("Welcome to AirGarage " + res.data.first_name"!");
+      })
 	}
 
 render() {
@@ -41,18 +63,19 @@ render() {
             </label>
 
             <label>DOB (MM/DD/YYYY)
-            <input type="date" name="dob" value={this.state.dob} onChange={this.handleChange}/><br/>
+            <input type="text" name="dob" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" value={this.state.dob} onChange={this.handleChange}/><br/>
             </label><br/>
 
             <label>Enter your email:
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange}/><br/>
             </label>
+
             <label>Enter your password:
             <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/><br/>
             </label><br/>
 
             <label>I am here looking for:</label>
-            <select id="opts" onChange={this.handleChange}>
+            <select id="opts" value={this.state.accountType} onChange={this.handleChange}>
             <option name="blank">Choose option</option>
             <option name="find_parking">Find parking</option>
             <option name="list_a_spot">List a spot</option>
@@ -62,7 +85,7 @@ render() {
 
             <br/>
             <label>Phone Number:
-            <input type="text" name="phone" maxlength="10" value={this.state.phone} onChange={this.handleChange}/><br/>
+            <input type="text" name="phone" maxLength="10" value={this.state.phone} onChange={this.handleChange}/><br/>
             </label>
             <br/>
             <input type="submit" value="Sign up!"/>
